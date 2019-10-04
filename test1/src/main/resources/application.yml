@@ -1,0 +1,32 @@
+
+#spring:
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          тут можно указать УРЛ сервера авторизации, который содержит публичные ключи для токенов
+#          jwk-set-uri: "http://localhost:8080/.well-known/jwks.json"
+
+# Конфигурирование actuator'а
+management:
+  endpoints:
+    web:
+      # Управление доступом к endpoint'ам через http
+      exposure:
+        # В качестве примера открываем все инструменты
+        include: '*'
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.web: debug
+
+test:
+  # адрес сервиса валидации. С ним работаем через gRPC
+  grpcServerUrl: localhost:6565
+  # адрес сервиса взаимодействия с БД
+  dbServiceUrl: http://localhost:8081/
+  httpConnectTimeoutSec: 60
+  httpReadTimeoutSec: 60

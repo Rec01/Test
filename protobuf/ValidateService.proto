@@ -1,0 +1,17 @@
+syntax = "proto3";
+package com.example.grpc;
+
+message ValidateRequest {
+    string name = 1;
+    string data = 2;
+    uint32 value = 3;
+
+}
+
+message ValidateResponse {
+    string validateResult = 1;
+}
+
+service ValidateService {
+    rpc Validate (ValidateRequest) returns (ValidateResponse);
+}

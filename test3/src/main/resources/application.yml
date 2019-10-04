@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+logging:
+  level:
+    org.springframework.web: debug
+
+spring:
+  jpa:
+    database:  h2
+    show-sql: true

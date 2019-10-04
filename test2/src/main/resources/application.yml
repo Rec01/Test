@@ -1,0 +1,7 @@
+example:
+  test2:
+    grpcPort: 6565
+
+logging:
+  level:
+    io.grpc.netty: debug
