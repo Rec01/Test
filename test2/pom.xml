@@ -17,7 +17,7 @@
     <properties>
         <java.version>1.8</java.version>
         <grpc-ver>1.23.0</grpc-ver>
-        <protobuf-java-ver>3.7.1</protobuf-java-ver>
+        <protobuf-java-ver>3.16.1</protobuf-java-ver>
     </properties>
 
     <dependencies>
